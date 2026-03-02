@@ -1,0 +1,75 @@
+/**
+ * Blog Post Styles
+ *
+ * Additional styles for single post view.
+ */
+
+.blog-post {
+    background: white;
+    border-radius: 8px;
+    padding: 3rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.blog-post header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #ecf0f1;
+}
+
+.blog-post header h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.blog-post .post-meta {
+    color: #7f8c8d;
+    font-size: 0.95rem;
+}
+
+.blog-post .post-meta .author {
+    font-weight: 500;
+}
+
+.blog-post .post-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 2rem;
+}
+
+.blog-post .post-content p {
+    margin-bottom: 1rem;
+}
+
+.blog-post .post-tags {
+    padding-top: 1rem;
+    border-top: 1px solid #ecf0f1;
+}
+
+.blog-post .post-tags strong {
+    color: #2c3e50;
+}
+
+.blog-post .post-tags .tag {
+    display: inline-block;
+    background: #3498db;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    margin-right: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .blog-post {
+        padding: 1.5rem;
+    }
+    
+    .blog-post header h2 {
+        font-size: 1.5rem;
+    }
+}

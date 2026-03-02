@@ -1,0 +1,25 @@
+{
+    "name": "pagemill/mvc",
+    "type": "library",
+    "license": "BSD-3-Clause",
+    "autoload": {
+        "psr-4": {
+            "PageMill\\MVC\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PageMill\\MVC\\Tests\\": "tests/",
+            "BlogExample\\": "example/src/"
+        }
+    },
+    "require": {
+        "php": "^8.2",
+        "pagemill/http": "^3.0",
+        "dealnews/filter": "^2.0",
+        "pagemill/accept": "^3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.5"
+    }
+}
