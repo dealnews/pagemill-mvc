@@ -64,7 +64,7 @@ class BlogListView extends HTMLAbstract {
         echo '<meta charset="UTF-8">';
         echo '<meta name="viewport" content="width=device-width, initial-scale=1.0">';
         $this->document->generateHead();
-        $this->assets->link('css');
+        $this->assets->link(null, 'css');
         echo '</head>';
         echo '<body>';
         echo '<header class="site-header">';

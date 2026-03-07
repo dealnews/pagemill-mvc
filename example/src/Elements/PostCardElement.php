@@ -71,6 +71,9 @@ class PostCardElement extends ElementAbstract {
     /**
      * Generate the element HTML
      *
+     * Renders a blog post card with title, author, date, excerpt,
+     * and tags. The card links to the full post view.
+     *
      * @return void
      */
     public function generateElement(): void {

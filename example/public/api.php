@@ -16,17 +16,16 @@ use PageMill\HTTP\Response;
 // Force JSON response
 header('Content-Type: application/json');
 
-$response = new Response();
-
 $path = $_SERVER['REQUEST_URI'] ?? '/';
-$inputs = $_GET;
 
-$controller = new BlogController($path, $inputs);
+// Create controller
+// Note: Don't pass $_GET - let the controller's filterInput() handle it
+$controller = new BlogController($path);
 
 try {
     $controller->handleRequest();
     
-} catch (\Exception $e) {
+} catch (\Throwable $e) {
     http_response_code(500);
     echo json_encode([
         'status' => 'error',

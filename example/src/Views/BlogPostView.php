@@ -59,8 +59,8 @@ class BlogPostView extends HTMLAbstract {
         echo '<head>';
         echo '<meta charset="UTF-8">';
         echo '<meta name="viewport" content="width=device-width, initial-scale=1.0">';
-        echo $this->document->generateHead();
-        $this->assets->link('css');
+        $this->document->generateHead();
+        $this->assets->link(null, 'css');
         echo '</head>';
         echo '<body>';
         echo '<header class="site-header">';

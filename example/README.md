@@ -179,10 +179,10 @@ $this->assets->add('css', ['blog', 'syntax-highlighting']);
 $this->assets->add('js', ['comments'], 'footer');
 
 // In generateHeader()
-$this->assets->link('css');
+$this->assets->link(null, 'css');
 
 // In generateFooter()
-$this->assets->link('js', 'footer');
+$this->assets->link('footer', 'js');
 ```
 
 ### 6. UI Components

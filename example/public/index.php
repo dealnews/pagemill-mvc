@@ -20,16 +20,14 @@ $response = new Response();
 $path = $_SERVER['REQUEST_URI'] ?? '/';
 $path = parse_url($path, PHP_URL_PATH);
 
-// Get query parameters
-$inputs = $_GET;
-
 // Create and execute controller
-$controller = new BlogController($path, $inputs);
+// Note: Don't pass $_GET - let the controller's filterInput() handle it
+$controller = new BlogController($path);
 
 try {
     $controller->handleRequest();
     
-} catch (\Exception $e) {
+} catch (\Throwable $e) {
     // Simple error handling for demo
     http_response_code(500);
     echo '<h1>Error</h1>';
