@@ -6,6 +6,7 @@ namespace PageMill\MVC\Tests\HTML;
 
 use PageMill\MVC\HTML\Assets;
 use PageMill\MVC\HTML\Assets\Exception;
+use PHPUnit\Framework\Attributes\WithoutErrorHandler;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -384,6 +385,7 @@ class AssetsTest extends TestCase {
     /**
      * Test missing asset with exceptions disabled
      */
+    #[WithoutErrorHandler]
     public function testMissingAssetWithExceptionsDisabled(): void {
         $assets = new Assets();
         $assets->addLocation('css', [
